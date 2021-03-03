@@ -127,6 +127,8 @@ namespace NCS.DSS.Contact.PatchContactDetailsHttpTrigger.Function
                 {
                     contactdetails.SetDigitalAccountEmailChanged(contactdetailsPatchRequest.EmailAddress?.ToLower(), diaccount.IdentityStoreId.Value);
                 }
+                else
+                    contactdetails.SetDigitalAccount();
             }
 
             if (errors != null && errors.Any())
